@@ -1,0 +1,60 @@
+         body{
+            background-color: white;
+         }
+        nav{
+            background-color: #349beb;
+            display: flex;
+            height: 60px;
+            vertical-align: center;
+        }
+
+        #logo{
+            width: 30px;
+            height: auto;
+            padding-right: 20px;
+            padding-left: 20px;
+            vertical-align: center;
+        }
+
+        #wsName{
+            padding-right: 30px;
+        }
+
+        #navbar{
+            padding: 20px;
+            text-align: center;
+            vertical-align: center;
+           
+        }
+        .navLink {
+            font-size: 20px;
+            font-style: bold;
+            color: white;
+            font-family: arial;
+           text-decoration: none;
+           margin-top: 10px;
+           padding-right: 20px;
+        }
+
+        #search {
+            background-color: #349beb;
+            color: blue;
+            text-align: left;
+            vertical-align: center;
+            width: 500px;
+            margin-top: 20px;
+            padding-left: 30px;
+        }
+
+        #searchInput{
+            font-size: 14px;
+            width: 300px;
+        }
+        button {
+            background-color: #c634eb;
+            color: white;
+        }
+
+        #home {
+            background-image: url(".nyc_background.jpg")
+        }
