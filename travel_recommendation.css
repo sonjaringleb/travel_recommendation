@@ -69,6 +69,7 @@ body{
             background-size: cover;
             flex-grow: 1;
             display: flex;
+            
         }
 
         #socialIcons{
@@ -113,4 +114,41 @@ body{
             color: #349beb;
             width: 200px;
          
+        }
+        #aboutArea{
+            display: flex;
+            flex-direction: column;
+        }
+
+        #aboutText {
+            width: 700px;
+        }
+        #teamH2{
+            padding-left: 150px;
+        
+        }
+        #team {
+            display: flex;
+            flex-direction: row;
+            padding-left: 100px;
+          
+        }
+
+        #teamMember {
+            display: flex;
+            flex-direction: column;
+            padding-right: 50px;
+            padding-left: 50px;
+            color: white;
+        }
+        h3{
+            color: black;
+        }
+        .person {
+            width: 50px;
+            height: auto;
+        }
+
+        #teamBtn{
+            width: 100px;
         }
