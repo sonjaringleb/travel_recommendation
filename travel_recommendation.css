@@ -93,9 +93,15 @@ body{
             flex-direction: column;
             padding-left: 200px;
             padding-top: 100px;
-          
-          
         }
+
+        #textContact {
+            display: flex;
+            flex-direction: row;
+            padding-left: 200px;
+
+        }
+
 
         #bookBtn{
             width: 100px;
@@ -156,16 +162,26 @@ body{
         #contactArea{
             display: flex;
             flex-direction: column;
+            margin-top: 50px;
         }
+
         #form{
             display: flex;
             flex-direction: row;
-            padding-left: 700px;
+            padding-left: 100px;
+            padding-top: 50px;
         }
+        
         #contactForm{
             display: flex;
             flex-direction: column;
+            /* margin-top: -100px; */
         }
+
+        #contactHeader {
+            padding-top: 50px;
+        }
+
         input{
             margin-bottom: 20px;
             width: 300px;
@@ -173,4 +189,9 @@ body{
 
         #message{
             height: 100px;
+            margin-bottom: 20px;
+        }
+
+        #messageBtn{
+            margin-top: 30px;
         }
