@@ -152,3 +152,25 @@ body{
         #teamBtn{
             width: 100px;
         }
+
+        #contactArea{
+            display: flex;
+            flex-direction: column;
+        }
+        #form{
+            display: flex;
+            flex-direction: row;
+            padding-left: 700px;
+        }
+        #contactForm{
+            display: flex;
+            flex-direction: column;
+        }
+        input{
+            margin-bottom: 20px;
+            width: 300px;
+        }
+
+        #message{
+            height: 100px;
+        }
