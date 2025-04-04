@@ -121,6 +121,41 @@ body{
             width: 200px;
          
         }
+
+        #searchResults{
+             display: flex;
+             flex-direction: column;
+             padding-top: 20px;
+             padding-left: 500px;
+        }
+        .recommendation{
+            background-color: white;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 10px;
+            padding-right: 10px;
+            border-radius: 5px;
+           
+        }
+        .destinationImage{
+            width: 200px;
+            height: auto;
+            padding-left: 100px;
+    
+        }
+        .destinationDescription{
+          
+            margin-top: 0px;
+            padding-left: 10px;
+          
+        }
+
+
+        .destinationText{
+            width: 400px;
+         
+        }
+
         #aboutArea{
             display: flex;
             flex-direction: column;

@@ -34,9 +34,6 @@ function getTravelRecommendation(event) {
         .then((response) => response.json())
         .then((data) => {
             console.log(data);
-        
-            
-           
 
         })
         .catch(error => {
