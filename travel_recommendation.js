@@ -92,6 +92,10 @@ function generateRecommendation(recommendation) {
 
 // console.log(generateRecommendation(recommendation));
 
-
+function clearSearchResults(){
+    document.getElementById("searchResults").innerHTML = " ";
+}
 
 searchBtn.addEventListener("click", getTravelRecommendation);
+
+clearBtn.addEventListener("click", clearSearchResults);
