@@ -94,8 +94,8 @@ function generateRecommendation(recommendation) {
 
 function clearSearchResults(){
     document.getElementById("searchResults").innerHTML = " ";
+    document.getElementById("searchInput").value = " ";
 }
 
 searchBtn.addEventListener("click", getTravelRecommendation);
-
 clearBtn.addEventListener("click", clearSearchResults);
