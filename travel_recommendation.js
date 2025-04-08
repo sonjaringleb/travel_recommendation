@@ -6,33 +6,28 @@ function getTravelRecommendation(event) {
     event.preventDefault();
 
     const apiUrl = "./travel_recommendation_api.json";
-    const keyword = document.getElementById("searchInput").value.toLowerCase();
-
-    const searchResults = document.getElementById("searchResults");
+    const searchTerm = document.getElementById("searchInput").value.trim();
+    const keyword = searchTerm.toLowerCase();
 
     console.log("Keyword = " + keyword);
 
-    let destinationType = " ";
+    let destinationType = "";
 
     if (keyword === "beach" || keyword === "beaches") {
         destinationType = "beaches";
-    }
-
-    if (keyword === "temple" || keyword === "temples") {
+    } else if (keyword === "temple" || keyword === "temples") {
         destinationType = "temples";
-    }
-
-    if (keyword === "country" || keyword === "countries") {
+    } else if (keyword === "country" || keyword === "countries") {
         destinationType = "countries";
     }
 
-     if (keyword != " " && destinationType === " ") {
-        destinationType = keyword;
-    }
+    // if (keyword !== "" && destinationType === "") {
+    //     destinationType = keyword;
+    // }
 
-    if (keyword && destinationType === " ") {
-        destinationType = "unknown";
-    }
+    // if (keyword && destinationType === "") {
+    //     destinationType = "unknown";
+    // }
 
     console.log("Destination Type = " + destinationType);
 
@@ -43,7 +38,29 @@ function getTravelRecommendation(event) {
 
             let recommendations;
 
-            if (destinationType === "countries") {
+            if (keyword !== "" && destinationType === "") {
+                recommendations = [];
+                for (const country of data.countries) {
+                    for (const city of country.cities) {
+                        if (city.name.toLowerCase().includes(keyword)) {
+                            recommendations.push(city);
+                        }
+                    }
+                }
+
+                for (const temple of data.temples) {
+                    if (temple.name.toLowerCase().includes(keyword)) {
+                        recommendations.push(temple);
+                    }
+                }
+
+                for (const beach of data.beaches) {
+                    if (beach.name.toLowerCase().includes(keyword)) {
+                        recommendations.push(beach);
+                    }
+                }
+
+            } else if (destinationType === "countries") {
                 recommendations = [];
                 for (const country of data.countries) {
                     for (const city of country.cities) {
@@ -53,11 +70,13 @@ function getTravelRecommendation(event) {
             } else {
                 recommendations = data[destinationType];
             }
-            
-            if(!recommendations){
+
+            if (!recommendations) {
                 alert("Enter a keyword into the text field, e.g., 'beach', and click the Search button.");
+            } else if (recommendations.length === 0){
+                alert(`No results found for "${searchTerm}". Try searching for another destination, e.g., "Australia".`);
             }
-            
+
             const searchResultsHTML = document.getElementById("searchResults");
             // const recommendation = {
             //     imageUrl: "/travel_recommendation/images/sydney.jpg",
@@ -71,10 +90,7 @@ function getTravelRecommendation(event) {
         })
         .catch(error => {
             console.error('Error:', error);
-            resultDiv.innerHTML = 'An error occurred while fetching data.';
         });
-
-
 }
 
 
@@ -99,12 +115,12 @@ function generateRecommendation(recommendation) {
 
 // console.log(generateRecommendation(recommendation));
 
-function clearSearchResults(){
-    document.getElementById("searchResults").innerHTML = " ";
-   // document.getElementById("searchInput").value = " ";
+function clearSearchResults() {
+    document.getElementById("searchResults").innerHTML = "";
+    // document.getElementById("searchInput").value = " ";
 }
 
 document.getElementById("search").addEventListener("submit", getTravelRecommendation);
 
 // searchBtn.addEventListener("click", getTravelRecommendation);
- clearBtn.addEventListener("click", clearSearchResults);
+clearBtn.addEventListener("click", clearSearchResults);
