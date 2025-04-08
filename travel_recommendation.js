@@ -26,8 +26,12 @@ function getTravelRecommendation(event) {
         destinationType = "countries";
     }
 
+     if (keyword != " " && destinationType === " ") {
+        destinationType = keyword;
+    }
+
     if (keyword && destinationType === " ") {
-        destinationType = "unknown"
+        destinationType = "unknown";
     }
 
     console.log("Destination Type = " + destinationType);
@@ -49,8 +53,11 @@ function getTravelRecommendation(event) {
             } else {
                 recommendations = data[destinationType];
             }
-
-
+            
+            if(!recommendations){
+                alert("Enter a keyword into the text field, e.g., 'beach', and click the Search button.");
+            }
+            
             const searchResultsHTML = document.getElementById("searchResults");
             // const recommendation = {
             //     imageUrl: "/travel_recommendation/images/sydney.jpg",
