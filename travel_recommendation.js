@@ -101,8 +101,10 @@ function generateRecommendation(recommendation) {
 
 function clearSearchResults(){
     document.getElementById("searchResults").innerHTML = " ";
-    document.getElementById("searchInput").value = " ";
+   // document.getElementById("searchInput").value = " ";
 }
 
-searchBtn.addEventListener("click", getTravelRecommendation);
-clearBtn.addEventListener("click", clearSearchResults);
+document.getElementById("search").addEventListener("submit", getTravelRecommendation);
+
+// searchBtn.addEventListener("click", getTravelRecommendation);
+ clearBtn.addEventListener("click", clearSearchResults);
