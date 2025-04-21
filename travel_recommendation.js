@@ -19,6 +19,8 @@ function getTravelRecommendation(event) {
         destinationType = "temples";
     } else if (keyword === "country" || keyword === "countries") {
         destinationType = "countries";
+    } else if (keyword === "city" || keyword === "cities") {
+        destinationType = "cities";
     }
 
     // if (keyword !== "" && destinationType === "") {
@@ -60,7 +62,7 @@ function getTravelRecommendation(event) {
                     }
                 }
 
-            } else if (destinationType === "countries") {
+            } else if (destinationType === "countries" || destinationType === "cities") {
                 recommendations = [];
                 for (const country of data.countries) {
                     for (const city of country.cities) {

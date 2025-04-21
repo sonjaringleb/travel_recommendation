@@ -47,6 +47,22 @@
                     "description": "The financial hub with diverse culture, arts, and a vibrant nightlife."
                 }
             ]
+        },
+         {
+            "id": 4,
+            "name": "USA",
+            "cities": [
+                {
+                    "name": "New York, USA",
+                    "imageUrl": "/travel_recommendation/images/nyc_background.jpg",
+                    "description": "This fascinating global metropolis is always worth a visit. With many famous sights, beautiful parks, and a variety of events and shows, there's something for everyone."
+                },
+                {
+                    "name": "San Francisco, USA",
+                    "imageUrl": "/travel_recommendation/images/san_francisco.jpg",
+                    "description": "'The City by the Bay' is world-renowned for its stunning landmarks, including the Golden Gate Bridge, Alcatraz Island, and the iconic Painted Ladies."
+                }
+            ]
         }
     ],
     "temples": [
@@ -75,6 +91,13 @@
             "name": "Copacabana Beach, Brazil",
             "imageUrl": "/travel_recommendation/images/copacabana.jpg",
             "description": "A famous beach in Rio de Janeiro, Brazil, with a vibrant atmosphere and scenic views."
+        },
+        {
+            "id": 3,
+            "name": "Waikiki Beach, USA",
+            "imageUrl": "/travel_recommendation/images/waikiki_beach_hawaii.jpg",
+            "description": "This beach in Hawaii is famous for its lively atmosphere, iconic waves, and stunning sunsets."
+            
         }
     ]
 }
