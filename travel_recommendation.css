@@ -49,7 +49,7 @@ body{
             color: blue;
             text-align: left;
             vertical-align: center;
-            width: 500px;
+            max-width: 500px;
             margin-top: 20px;
             padding-left: 30px;
         }
@@ -87,19 +87,22 @@ body{
             width: 25px;
             height: auto;
             padding-bottom: 20px;
+            padding-right: 20px;
         }
 
         #text{
             display: flex;
             flex-direction: column;
-            padding-left: 200px;
+            /* padding-left: 200px;*/
             padding-top: 100px;
+            padding-right: 20px;
         }
 
         #textContact {
             display: flex;
             flex-direction: row;
-            padding-left: 200px;
+         /*   padding-left: 200px; */
+         padding-right: 50px;
 
         }
 
@@ -127,7 +130,8 @@ body{
              display: flex;
              flex-direction: column;
              padding-top: 20px;
-             padding-left: 500px;
+             padding-right: 20px;
+         /*    padding-left: 500px; */
         }
         
         .recommendation{
@@ -137,7 +141,7 @@ body{
             flex-direction: column;
             align-items: center;
             padding: 10px;
-            width: 400px;
+            max-width: 400px;
             margin-bottom: 10px;
         }
 
@@ -152,16 +156,16 @@ body{
         }
 
         #aboutText {
-            width: 700px;
+            max-width: 700px;
         }
         #teamH2{
-            padding-left: 150px;
+            /* padding-left: 150px; */
         
         }
         #team {
             display: flex;
             flex-direction: row;
-            padding-left: 100px;
+           /*  padding-left: 100px;  */
           
         }
 
@@ -188,13 +192,15 @@ body{
             display: flex;
             flex-direction: column;
             margin-top: 50px;
+           
         }
 
         #form{
             display: flex;
             flex-direction: row;
-            padding-left: 100px;
+            /* padding-left: 100px; */
             padding-top: 50px;
+            padding-left: 20px;
         }
         
         #contactForm{
