@@ -7,12 +7,14 @@
                 {
                     "name": "Sydney, Australia",
                     "imageUrl": "/travel_recommendation/images/sydney.jpg",
-                    "description": "A vibrant city known for its iconic landmarks like the Sydney Opera House and Sydney Harbour Bridge."
+                    "description": "A vibrant city known for its iconic landmarks like the Sydney Opera House and Sydney Harbour Bridge.",
+                    "timezone": "Australia/Sydney"
                 },
                 {
                     "name": "Melbourne, Australia",
                     "imageUrl": "/travel_recommendation/images/melbourne.jpg",
-                    "description": "A cultural hub famous for its art, food, and diverse neighborhoods."
+                    "description": "A cultural hub famous for its art, food, and diverse neighborhoods.",
+                    "timezone": "Australia/Melbourne"
                 }
             ]
         },
@@ -23,12 +25,14 @@
                 {
                     "name": "Tokyo, Japan",
                     "imageUrl": "/travel_recommendation/images/tokyo.jpg",
-                    "description": "A bustling metropolis blending tradition and modernity, famous for its cherry blossoms and rich culture."
+                    "description": "A bustling metropolis blending tradition and modernity, famous for its cherry blossoms and rich culture.",
+                    "timezone": "Asia/Tokyo"
                 },
                 {
                     "name": "Kyoto, Japan",
                     "imageUrl": "/travel_recommendation/images/kyoto.jpg",
-                    "description": "Known for its historic temples, gardens, and traditional tea houses."
+                    "description": "Known for its historic temples, gardens, and traditional tea houses.",
+                    "timezone": "Asia/Tokyo"
                 }
             ]
         },
@@ -39,12 +43,14 @@
                 {
                     "name": "Rio de Janeiro, Brazil",
                     "imageUrl": "/travel_recommendation/images/rio_de_janeiro.jpg",
-                    "description": "A lively city known for its stunning beaches, vibrant carnival celebrations, and iconic landmarks."
+                    "description": "A lively city known for its stunning beaches, vibrant carnival celebrations, and iconic landmarks.",
+                    "timezone": "America/Sao_Paulo"
                 },
                 {
                     "name": "São Paulo, Brazil",
                     "imageUrl": "/travel_recommendation/images/sao_paolo.jpg",
-                    "description": "The financial hub with diverse culture, arts, and a vibrant nightlife."
+                    "description": "The financial hub with diverse culture, arts, and a vibrant nightlife.",
+                    "timezone": "America/Sao_Paulo"
                 }
             ]
         },
@@ -55,12 +61,14 @@
                 {
                     "name": "New York, USA",
                     "imageUrl": "/travel_recommendation/images/nyc_background.jpg",
-                    "description": "This fascinating global metropolis is always worth a visit. With many famous sights, beautiful parks, and a variety of events and shows, there's something for everyone."
+                    "description": "This fascinating global metropolis is always worth a visit. With many famous sights, beautiful parks, and a variety of events and shows, there's something for everyone.",
+                    "timezone": "America/New_York"
                 },
                 {
                     "name": "San Francisco, USA",
                     "imageUrl": "/travel_recommendation/images/san_francisco.jpg",
-                    "description": "'The City by the Bay' is world-renowned for its stunning landmarks, including the Golden Gate Bridge, Alcatraz Island, and the iconic Painted Ladies."
+                    "description": "'The City by the Bay' is world-renowned for its stunning landmarks, including the Golden Gate Bridge, Alcatraz Island, and the iconic Painted Ladies.",
+                    "timezone": "America/Los_Angeles"
                 }
             ]
         }
@@ -70,13 +78,15 @@
             "id": 1,
             "name": "Angkor Wat, Cambodia",
             "imageUrl": "/travel_recommendation/images/angkor_wat_unesco_cambodia.jpg",
-            "description": "A UNESCO World Heritage site and the largest religious monument in the world."
+            "description": "A UNESCO World Heritage site and the largest religious monument in the world.",
+            "timezone": "Asia/Phnom_Penh"
         },
         {
             "id": 2,
             "name": "Taj Mahal, India",
             "imageUrl": "/travel_recommendation/images/taj_mahal.jpg",
-            "description": "An iconic symbol of love and a masterpiece of Mughal architecture."
+            "description": "An iconic symbol of love and a masterpiece of Mughal architecture.",
+            "timezone": "Asia/Calcutta"
         }
     ],
     "beaches": [
@@ -84,19 +94,22 @@
             "id": 1,
             "name": "Bora Bora, French Polynesia",
             "imageUrl": "/travel_recommendation/images/borabora.jpg",
-            "description": "An island known for its stunning turquoise waters and luxurious overwater bungalows."
+            "description": "An island known for its stunning turquoise waters and luxurious overwater bungalows.",
+            "timezone": "Pacific/Tahiti"
         },
         {
             "id": 2,
             "name": "Copacabana Beach, Brazil",
             "imageUrl": "/travel_recommendation/images/copacabana.jpg",
-            "description": "A famous beach in Rio de Janeiro, Brazil, with a vibrant atmosphere and scenic views."
+            "description": "A famous beach in Rio de Janeiro, Brazil, with a vibrant atmosphere and scenic views.",
+            "timezone": "America/Sao_Paulo"
         },
         {
             "id": 3,
             "name": "Waikiki Beach, USA",
             "imageUrl": "/travel_recommendation/images/waikiki_beach_hawaii.jpg",
-            "description": "This beach in Hawaii is famous for its lively atmosphere, iconic waves, and stunning sunsets."
+            "description": "This beach in Hawaii is famous for its lively atmosphere, iconic waves, and stunning sunsets.",
+            "timezone": "Pacific/Honolulu"
             
         }
     ]

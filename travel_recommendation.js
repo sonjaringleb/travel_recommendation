@@ -2,6 +2,14 @@ searchBtn = document.getElementById("searchBtn");
 
 console.log("Start JS script.");
 
+showTimeDataNYC();
+
+function showTimeDataCountries(timezone){
+    const options = { timeZone: timezone, hour12: true, hour: 'numeric', minute: 'numeric', second: 'numeric' };
+    const newResultTimeData = new Date().toLocaleTimeString('en-US', options);
+    return newResultTimeData;
+}
+
 function getTravelRecommendation(event) {
     event.preventDefault();
 
@@ -103,11 +111,14 @@ function generateRecommendation(recommendation) {
 
     //console.log(recommendation);
 
+    let localTime = showTimeDataCountries(recommendation.timezone);
+
     const htmlString = `<div class="recommendation">
     <img class="destinationImage" src="${recommendation.imageUrl}"/>
     <div class="destinationDescription">
         <h3 class="destinationHeader">${recommendation.name}</h3>
         <p class="destinationText">${recommendation.description}</p>
+        <p class="timeData">Timezone: ${recommendation.timezone} </br> Local Time: ${localTime}</p>
         <button class ="visitBtn">Visit</button>
     </div>
 </div>`
@@ -126,3 +137,10 @@ document.getElementById("search").addEventListener("submit", getTravelRecommenda
 
 // searchBtn.addEventListener("click", getTravelRecommendation);
 clearBtn.addEventListener("click", clearSearchResults);
+
+function showTimeDataNYC(){
+    const options = { timeZone: 'America/New_York', hour12: true, hour: 'numeric', minute: 'numeric', second: 'numeric' };
+    const newYorkTime = new Date().toLocaleTimeString('en-US', options);
+    console.log("Current time in New York:", newYorkTime);
+}
+
