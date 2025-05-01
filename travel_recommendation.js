@@ -94,7 +94,7 @@ function getTravelRecommendation(event) {
             //     description: "A vibrant city known for its iconic landmarks like the Sydney Opera House and Sydney Harbour Bridge."
             // };
 
-            const recommendationsHTML = recommendations.map((recommendation) => generateRecommendation(recommendation)).join();
+            const recommendationsHTML = recommendations.map((recommendation) => generateRecommendation(recommendation)).join('');
 
             searchResultsHTML.innerHTML = recommendationsHTML;
         })

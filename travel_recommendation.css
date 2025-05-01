@@ -14,6 +14,7 @@ body{
             display: flex;
             height: 60px;
             vertical-align: center;
+            text-wrap: nowrap;
         }
 
         #logo{
@@ -56,8 +57,9 @@ body{
 
         #searchInput{
             font-size: 14px;
-            width: 300px;
+            width: 200px;
         }
+        
         button {
             background-color: #c634eb;
             color: white;
@@ -93,9 +95,11 @@ body{
         #text{
             display: flex;
             flex-direction: column;
+            flex-grow: 1;
             /* padding-left: 200px;*/
             padding-top: 100px;
             padding-right: 20px;
+            padding-left: 40px;
         }
 
         #textContact {
@@ -129,9 +133,9 @@ body{
         #searchResults{
              display: flex;
              flex-direction: column;
+             flex-grow: 4;
              padding-top: 20px;
              padding-right: 20px;
-         /*    padding-left: 500px; */
         }
         
         .recommendation{
@@ -151,8 +155,8 @@ body{
         }
 
         #aboutArea{
-            display: flex;
-            flex-direction: column;
+            /* display: flex;
+            flex-direction: column; */
         }
 
         #aboutText {
@@ -166,26 +170,31 @@ body{
             display: flex;
             flex-direction: row;
            /*  padding-left: 100px;  */
-          
+            gap: 50px;
         }
 
-        #teamMember {
+        .teamMember {
             display: flex;
             flex-direction: column;
-            padding-right: 50px;
-            padding-left: 50px;
+            /* padding-right: 50px; */
+            /* padding-left: 50px; */
             color: white;
         }
         h3{
             color: black;
         }
         .person {
-            width: 50px;
-            height: auto;
+            width: auto;
+            height: 50px;
         }
 
-        #teamBtn{
-            width: 100px;
+        .teamMemberName {
+            text-align: center;
+        }
+
+        .teamBtn{
+            /* width: 100px; */
+            text-wrap: nowrap;
         }
 
         #contactArea{
