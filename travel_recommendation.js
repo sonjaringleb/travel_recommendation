@@ -4,7 +4,7 @@ console.log("Start JS script.");
 
 showTimeDataNYC();
 
-function showTimeDataCountries(timezone){
+function showTimeDataCountries(timezone) {
     const options = { timeZone: timezone, hour12: true, hour: 'numeric', minute: 'numeric', second: 'numeric' };
     const newResultTimeData = new Date().toLocaleTimeString('en-US', options);
     return newResultTimeData;
@@ -83,7 +83,7 @@ function getTravelRecommendation(event) {
 
             if (!recommendations) {
                 alert("Enter a keyword into the text field, e.g., 'beach', and click the Search button.");
-            } else if (recommendations.length === 0){
+            } else if (recommendations.length === 0) {
                 alert(`No results found for "${searchTerm}". Try searching for another destination, e.g., "Australia".`);
             }
 
@@ -133,14 +133,48 @@ function clearSearchResults() {
     // document.getElementById("searchInput").value = " ";
 }
 
-document.getElementById("search").addEventListener("submit", getTravelRecommendation);
+const searchForm = document.getElementById("search");
+if (searchForm) {
+    searchForm.addEventListener("submit", getTravelRecommendation);
 
-// searchBtn.addEventListener("click", getTravelRecommendation);
-clearBtn.addEventListener("click", clearSearchResults);
+    // searchBtn.addEventListener("click", getTravelRecommendation);
+    clearBtn.addEventListener("click", clearSearchResults);
+}
 
-function showTimeDataNYC(){
+function showTimeDataNYC() {
     const options = { timeZone: 'America/New_York', hour12: true, hour: 'numeric', minute: 'numeric', second: 'numeric' };
     const newYorkTime = new Date().toLocaleTimeString('en-US', options);
     console.log("Current time in New York:", newYorkTime);
 }
 
+const messageSubmit = document.getElementById('messageSubmit');
+const contactForm = document.getElementById('contactForm');
+console.log(contactForm);
+
+const test = document.getElementById('contactArea');
+console.log(test);
+
+function sendMessage(event) {
+
+    event.preventDefault();
+
+    const username = document.getElementById("name").value;
+    const userEmail = document.getElementById("email").value;
+    const message = document.getElementById("message").value;
+    const messageSentInfo = document.getElementById("messageSentInfo");
+
+    console.log("Message sent.");
+
+    const messageSentAlert = `"Thank you ${username} for your message: ${message}. We will respond as soon as possible by sending an email to ${userEmail}."`;
+
+ //   alert(messageSentAlert);
+    alert("Message Sent!");
+
+    messageSentInfo.innerHTML = `<p>Thank you ${username} for your message: ${message}.</p><p>We will respond as soon as possible by sending an email to ${userEmail}.</p>`;
+}
+
+if (contactForm) {
+    contactForm.addEventListener("submit", sendMessage);
+
+    console.log("Test");
+}

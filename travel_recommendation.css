@@ -222,6 +222,11 @@ body{
             padding-top: 50px;
         }
 
+        #messageSentInfo {
+            padding-left: 40px;
+            color: #c634eb;
+        }
+
         input{
             margin-bottom: 20px;
             width: 300px;
