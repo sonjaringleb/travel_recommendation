@@ -103,10 +103,6 @@ function getTravelRecommendation(event) {
         });
 }
 
-
-
-
-
 function generateRecommendation(recommendation) {
 
     //console.log(recommendation);
@@ -119,7 +115,7 @@ function generateRecommendation(recommendation) {
         <h3 class="destinationHeader">${recommendation.name}</h3>
         <p class="destinationText">${recommendation.description}</p>
         <p class="timeData">Timezone: ${recommendation.timezone} </br> Local Time: ${localTime}</p>
-        <button class ="visitBtn">Visit</button>
+        <button class="visitBtn" onclick="showBookingConfirmation('${recommendation.name}')">Visit</button>
     </div>
 </div>`
 
@@ -167,7 +163,7 @@ function sendMessage(event) {
 
     const messageSentAlert = `"Thank you ${username} for your message: ${message}. We will respond as soon as possible by sending an email to ${userEmail}."`;
 
- //   alert(messageSentAlert);
+    //   alert(messageSentAlert);
     alert("Message Sent!");
 
     messageSentInfo.innerHTML = `<p>Thank you ${username} for your message: ${message}.</p><p>We will respond as soon as possible by sending an email to ${userEmail}.</p>`;
@@ -178,3 +174,24 @@ if (contactForm) {
 
     console.log("Test");
 }
+
+const bookButton = document.getElementById("bookBtn");
+
+function clickBookButton(event) {
+    event.preventDefault();
+
+    alert("For booking your vacation, search for a destination (e.g., by entering 'beach' into the search field). Then click the 'Visit' button of the destination you want to book.");
+}
+
+if (bookButton) {
+    bookButton.addEventListener("click", clickBookButton);
+}
+
+
+function showBookingConfirmation(destinationName) {
+    const bookingConfirmation = `Thank you for booking your vacation at the following destination: ${destinationName}!`;
+    alert(bookingConfirmation);
+
+    console.log(destinationName);
+}
+
