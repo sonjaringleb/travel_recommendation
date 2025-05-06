@@ -179,7 +179,11 @@ body{
             /* padding-right: 50px; */
             /* padding-left: 50px; */
             color: white;
+            max-width: 250px;
         }
+
+     
+
         h3{
             color: black;
         }

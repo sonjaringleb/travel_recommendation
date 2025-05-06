@@ -195,3 +195,22 @@ function showBookingConfirmation(destinationName) {
     console.log(destinationName);
 }
 
+const teamInfoArea = document.getElementById("team");
+if (teamInfoArea) {
+
+}
+
+function showTeamInfo(position,teamMemberName) {
+    const jobDescription = document.getElementById(position);
+    console.log(position, teamMemberName);
+    
+
+    switch(position){
+        case "ceo": jobDescription.innerText = `${teamMemberName} has founded the company 10 years ago. He is responsible for the company, strategy and finances.`;
+            break;
+        case "teamLead": jobDescription.innerText = `${teamMemberName} is responsible for managing the team. This includes also various HR tasks.`; 
+            break;
+        case "marketing": jobDescription.innerText = `${teamMemberName} is responsible for attracting customers by developing and implementing content marketing and social media strategies.`;
+            break;
+    }
+}
