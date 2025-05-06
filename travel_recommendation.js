@@ -202,15 +202,20 @@ if (teamInfoArea) {
 
 function showTeamInfo(position,teamMemberName) {
     const jobDescription = document.getElementById(position);
+
+    const firstName = teamMemberName.split(' ');
+    const teamMemberFirstName = firstName[0];
+    
     console.log(position, teamMemberName);
+    
     
 
     switch(position){
-        case "ceo": jobDescription.innerText = `${teamMemberName} has founded the company 10 years ago. He is responsible for the company, strategy and finances.`;
+        case "ceo": jobDescription.innerText = `${teamMemberFirstName} founded Travel Guide 10 years ago. He is responsible for the company, its strategy and finances.`;
             break;
-        case "teamLead": jobDescription.innerText = `${teamMemberName} is responsible for managing the team. This includes also various HR tasks.`; 
+        case "teamLead": jobDescription.innerText = `${teamMemberFirstName} is responsible for managing the team. This includes also various HR tasks.`; 
             break;
-        case "marketing": jobDescription.innerText = `${teamMemberName} is responsible for attracting customers by developing and implementing content marketing and social media strategies.`;
+        case "marketing": jobDescription.innerText = `${teamMemberFirstName} is responsible for promoting travel destinations by developing and implementing content marketing and social media strategies.`;
             break;
     }
 }
